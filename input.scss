@@ -1,0 +1,160 @@
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+$vlight-grey-blue: hsl(210, 60%, 98%);
+$light-grey-blue1: hsl(211, 68%, 94%);
+$light-grey-blue2: hsl(205, 33%, 90%);
+$grey-blue: hsl(219, 14%, 63%);
+$dark-grey-blue: hsl(219, 12%, 42%);
+$dark-blue: hsl(224, 21%, 14%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font: 14px "Plus Jakarta Sans";
+  background-color: #f9fafd;
+}
+
+.main-container {
+  padding: 16px;
+  width: 100%;
+  height: 85%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header * {
+  display: inline-block;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  h1 {
+    color: $dark-blue;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 1px;
+  }
+  #notif-count {
+    background-color: $blue;
+    width: 32px;
+    height: 25px;
+    color: #fff;
+    // font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    margin-left: 10px;
+    line-height: 25px;
+  }
+  #dismiss-notif {
+    color: $dark-blue;
+    margin-left: auto;
+    // font-size: 14px;
+    text-decoration: none;
+  }
+  #dismiss-notif:hover {
+    color: $blue;
+  }
+}
+
+.notification {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 16px;
+  //   font-size: 14px;
+  color: $dark-grey-blue;
+  line-height: 18px;
+
+  .profile-pic {
+    width: 39px;
+    height: 39px;
+    margin-right: 13px;
+  }
+
+  .user-name {
+    color: $dark-blue;
+    font-weight: 800;
+    margin-right: 6px;
+    text-decoration: none;
+  }
+  .user-name:hover {
+    color: $blue;
+  }
+  .post-link {
+    color: $dark-grey-blue;
+    text-decoration: none;
+    font-weight: 800;
+  }
+
+  .group-link {
+    color: $blue;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .time-elapsed {
+    margin-top: 3px;
+  }
+
+  .quoted-text {
+    border: 2px solid $light-grey-blue2;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+  .quoted-text:hover {
+    background-color: $light-grey-blue1;
+  }
+
+  .notif-pic {
+    width: 39px;
+    height: 39px;
+    float: right;
+    margin-left: 25px;
+  }
+}
+
+.notification.new {
+  cursor: pointer;
+}
+
+.notif-dot {
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  background-color: $red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@media (min-width: 850px) {
+  body {
+    font-size: 16px;
+  }
+  .main-container {
+    width: 50%;
+    margin: 10% auto;
+  }
+  header {
+    h1 {
+      font-size: 24px;
+    }
+  }
+  .notification {
+    .profile-pic {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
