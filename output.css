@@ -29,6 +29,7 @@ header {
   align-items: center;
   justify-content: flex-start;
   white-space: nowrap;
+  margin-bottom: 30px;
 }
 header h1 {
   color: hsl(224deg, 21%, 14%);
